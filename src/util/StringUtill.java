@@ -29,4 +29,14 @@ public class StringUtill {
         }
         return sb.toString();
     }
+    
+    public static String capitalize(String string) {
+    	String capitalize = string.substring(0,1).toUpperCase() + string.substring(1).toLowerCase();
+    	return capitalize;
+    }
+    
+    public static String decapitalize(String string) {
+    	String decapitalize = string.substring(0,1).toLowerCase() + string.substring(1);
+    	return decapitalize;
+    }
 }

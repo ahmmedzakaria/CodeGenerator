@@ -5,7 +5,7 @@
  */
 package sqltojava;
 
-import com.sun.xml.internal.ws.util.StringUtils;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -25,6 +25,7 @@ import sqltojava.model.ClassField;
 import sqltojava.model.FieldMaps;
 import sqltojava.model.JavaAnnotation;
 import sqltojava.model.JavaCls;
+import util.StringUtill;
 
 /**
  *
@@ -362,7 +363,7 @@ public class Process {
        return files;
     }
     public String getCamaleCase(String str){
-        return StringUtils.decapitalize(getPascalCase(str));
+        return StringUtill.decapitalize(getPascalCase(str));
     }
     
      public String getPascalCase(String str){
@@ -370,7 +371,7 @@ public class Process {
         List<String> words = Arrays.asList(str.split("_"));
         if(words.size()>0){
             words.forEach(word->{
-            sb.append(StringUtils.capitalize(word));
+            sb.append(StringUtill.capitalize(word));
         });
         }
         return sb.toString();
